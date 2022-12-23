@@ -1,0 +1,31 @@
+<%-include('partials/header.ejs') %>
+<body>
+  <%-include('partials/navbar.ejs') %>
+  <div class="container my-5">
+    <div class="card">
+      <div class="card-header">
+        <h1>Formulário de Pergunta</h1>
+      </div>
+      <div class="card-body">
+        <form action="">
+          <label for="">Digite o título de sua pergunta:</label>
+          <input
+            type="text"
+            placeholder="Escreva a sua pergunta:"
+            class="form-control"
+          />
+          <br />
+          <label for="">Detalhe a sua pergunta::</label>
+          <input
+            type="text"
+            placeholder="Descreva a sua pergunta:"
+            class="form-control"
+          />
+          <br />
+          <button class="btn btn-success">Perguntar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+<%-include('partials/footer.ejs') %>
