@@ -7,19 +7,23 @@
         <h1>Formulário de Pergunta</h1>
       </div>
       <div class="card-body">
-        <form action="">
+        <form method="POST" action="/salvarpergunta">
           <label for="">Digite o título de sua pergunta:</label>
           <input
+            name="titulo"
             type="text"
             placeholder="Escreva a sua pergunta:"
             class="form-control"
+            required
           />
           <br />
           <label for="">Detalhe a sua pergunta::</label>
           <input
+            name="descricao"
             type="text"
             placeholder="Descreva a sua pergunta:"
             class="form-control"
+            required
           />
           <br />
           <button class="btn btn-success">Perguntar</button>

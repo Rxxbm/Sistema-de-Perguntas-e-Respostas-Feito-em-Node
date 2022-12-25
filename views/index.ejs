@@ -1,5 +1,40 @@
 <%-include('partials/header.ejs') %>
 <body>
   <%-include('partials/navbar.ejs') %>
+
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="text-center" style="margin-top: 30px">
+          Adicionar Perguntas
+        </h2>
+        <p class="text-center text-dark">
+          Clique abaixo para adicionar perguntas
+        </p>
+        <a
+          href="/perguntar"
+          class="btn btn-primary container"
+          style="width: 40vw; margin: auto; text-align: center; display: block"
+          >Adicionar perguntas</a
+        >
+      </div>
+    </div>
+    <hr style="margin-bottom: 36px" />
+    <% perguntas.forEach(pergunta => {%>
+    <div class="card my-3">
+      <div class="card-body">
+        <h2><%=pergunta.titulo%></h2>
+      </div>
+      <div class="card-footer">
+        <a href="/pergunta/<%=pergunta.id%>"
+          ><button class="btn btn-primary">Responder</button></a
+        >
+      </div>
+    </div>
+
+    <!-- <p class="bg-dark text-white p-3"></p>
+    <p class="bg-dark text-white p-3">Descrição: <%=pergunta.descricao%></p> -->
+    <%})%>
+  </div>
 </body>
 <%-include('partials/footer.ejs') %>
